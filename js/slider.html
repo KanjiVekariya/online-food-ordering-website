@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Category Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .scroll-btn {
+      background-color: #f0f0f0;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 18px;
+    }
+
+    .scroll-btn:hover {
+      background-color: #ddd;
+    }
+
+    .scroll-wrapper {
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      scrollbar-width: none;
+    }
+
+    .scroll-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-card {
+      flex: 0 0 auto;
+      width: 120px;
+      text-align: center;
+    }
+
+    .category-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .view-all {
+      margin-left: auto;
+      margin-right: 20px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>Category</h2>
+    <button class="view-all">View All</button>
+  </div>
+
+  <div class="slider-container">
+    <button class="scroll-btn" onclick="scrollLeft()">&#8249;</button>
+
+    <div class="scroll-wrapper" id="categoryScroll">
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Fruits" alt="Fruits & Veges">
+        <p>Fruits & Veges</p>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Sweets" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Juice" alt="Fruits & Veges">
+        <p>Fruits & Veges</p>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Oil" alt="Beverages">
+        <p>Beverages</p>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Meat" alt="Meat Products">
+        <p>Meat Products</p>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Herbs" alt="Breads">
+        <p>Breads</p>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Eggs" alt="Fruits & Veges">
+        <p>Fruits & Veges</p>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+	  <div class="category-card">
+        <img src="https://via.placeholder.com/100x100.png?text=Bun" alt="Breads & Sweets">
+        <p>Breads & Sweets</p>
+      </div>
+    </div>
+
+    <button class="scroll-btn" onclick="scrollRight()">&#8250;</button>
+  </div>
+
+  <script>
+    const scrollWrapper = document.getElementById('categoryScroll');
+
+    function scrollLeft() {
+      scrollWrapper.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      scrollWrapper.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
